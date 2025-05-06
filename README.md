@@ -1,7 +1,11 @@
 # Curso GitHub
-# <h1 align="center">Clase 1 – Introducción al Control de Versiones y Git</h1>
+ 
+<details>
+  <summary><strong>📘 Clase 1 – Introducción al Control de Versiones y Git</strong></summary>
 
-## <h2 align="center">¿Qué es un control de versiones?</h2>
+<br>
+<h2 align="center">¿Qué es un control de versiones?</h2>
+
 El control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo de tal manera que sea posible recuperar versiones especificas más adelante. Permite:
  
 - ✅ Llevar un historial completo de modificaciones.<br>
@@ -18,17 +22,21 @@ Los sistemas de control de versiones han ido evolucionando a lo largo del tiempo
  ### <p align="center"><strong>📁 Sistemas de Control de Versiones Locales</strong></p>
 
 Los sistemas locales almacenaban versiones en bases de datos en lugar de múltiples archivos. Solo se tenía una copia activa del proyecto, evitando confusión o eliminación de versiones.
+
 <p align="center">
 <img src="img/v_local.png" alt="Control version local" width="60%">
 </p>
+
 👉 Se trabajaba en el computador personal del desarrollador, sin una forma eficiente de compartir el código.
 
 ### <p align="center"><strong>🌐 Sistemas de Control de Versiones Centralizados</strong></p>
 
 Para facilitar la colaboración, se comenzó a usar un servidor central donde se almacenaban los cambios y versiones.
+
 <p align="center">
 <img src="img/v_centralizado.png" alt="Control version Centralizado" width="60%">
 </p>
+
 📌 Problema: conflictos al editar el mismo archivo.
 🛠️ Solución: gestionar conflictos manualmente.
 😰 Limitación: ineficiente en equipos grandes con actualizaciones frecuent6.
@@ -85,6 +93,7 @@ Permite:
 Un repositorio es el **almacén donde se guardan los archivos del proyecto y su historial**. 
 
 📚 Metáfora: Es como una estantería con libros, donde cada libro representa una versión diferente del proyecto.
+
 <div align="center">
   <a href="" title="Estante de Libros">
     <img src="/img/estante_libros.png?sanitize=true" width="300" height="280" aria-hidden="true">
@@ -192,3 +201,6 @@ Ejemplo:
 | `git commit --amend -m "nuevo mensaje"` | Cambia el mensaje del último commit. |
 | `git commit -am "mensaje"` | Agrega y hace commit de todos los archivos rastreados. |
 | `git checkout <id_commit>` | Cambia el HEAD a un commit anterior. |
+
+
+</details>
