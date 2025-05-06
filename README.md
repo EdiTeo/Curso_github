@@ -37,9 +37,9 @@ Para facilitar la colaboración, se comenzó a usar un servidor central donde se
 <img src="img/v_centralizado.png" alt="Control version Centralizado" width="60%">
 </p>
 
-📌 Problema: conflictos al editar el mismo archivo.
-🛠️ Solución: gestionar conflictos manualmente.
-😰 Limitación: ineficiente en equipos grandes con actualizaciones frecuent6.
+📌 Problema: conflictos al editar el mismo archivo.<br>
+🛠️ Solución: gestionar conflictos manualmente.<br>
+😰 Limitación: ineficiente en equipos grandes con actualizaciones frecuentes.<br>
 
 ### <p align="center"><strong>🌍 Sistemas de Control de Versiones Distribuidos</strong></p>
 
