@@ -12,7 +12,7 @@ El control de versiones es un sistema que registra los cambios realizados sobre 
        - 🤝 Trabajar en equipo sin conflictos.<br>
   </div>
   <div style="flex: 2;" id="markdown-container">
-        <img src="img/control_version.png" alt="Imagen control de versiones" width="80%">
+        <img src="img/control_version.png" alt="Imagen control de versiones" width="40%">
   </div>
 </div>
 
@@ -145,10 +145,13 @@ git commit
 ```
 Se abrirá un editor donde debes escribir el mensaje del commit. Luego guarda y cierra.
 
-4. Ver el historial de commits:
+4. Ver todo el historial de commits:
 ```bash
 git log
 ```
+ Te mostrara lo siguiente: 
+ <img src="img/salida_git_log.png" alt="alt text" width="500" height="auto">
+
 
 ---
 
@@ -177,11 +180,7 @@ git log
 ```
 
 Ejemplo:
-```
-commit bd68fe7a12bedcff7f3330ec376ec1dfea2fad4b (HEAD -> main)
-Author: Sebastian Barrera <correo@ejemplo.com>
-Date:   Sun May 5 18:20:18 2024 -0400
-```
+<img src="img/head_apunta.png" alt="alt text" width="500" height="auto"> 
 
 ---
 
