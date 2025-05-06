@@ -2,12 +2,53 @@
 # Clase 1 – Introducción al Control de Versiones y Git
 
 ## ¿Qué es un control de versiones?
-Un sistema que registra cada cambio que se realiza en el código fuente de un proyecto. Permite:
+El control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo de tal manera que sea posible recuperar versiones especificas más adelante. Permite:
+ 
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1; padding-right: 100px;">
+       - ✅ Llevar un historial completo de modificaciones.<br>
+       - 👤 Saber quién hizo qué y cuándo.<br>
+       - 🔄 Revertir errores fácilmente.<br>
+       - 🤝 Trabajar en equipo sin conflictos.<br>
+  </div>
+  <div style="flex: 2;" id="markdown-container">
+        <img src="img/control_version.png" alt="Imagen control de versiones" width="80%">
+  </div>
+</div>
 
-- Llevar un historial completo de modificaciones.
-- Saber quién hizo qué y cuándo.
-- Revertir errores fácilmente.
-- Trabajar en equipo sin conflictos.
+Los sistemas de control de versiones han ido evolucionando a lo largo del tiempo y podemos clasificarlos en tres tipos: **Locales**, **Centralizados** y **Distribuidos**.
+
+ ### 📁 Sistemas de Control de Versiones Locales
+
+Los sistemas locales almacenaban versiones en bases de datos en lugar de múltiples archivos. Solo se tenía una copia activa del proyecto, evitando confusión o eliminación de versiones.
+<p align="center">
+<img src="img/v_local.png" alt="Control version local" width="60%">
+</p>
+👉 Se trabajaba en el computador personal del desarrollador, sin una forma eficiente de compartir el código.
+
+  ### 🌐 Sistemas de Control de Versiones Centralizados
+
+Para facilitar la colaboración, se comenzó a usar un servidor central donde se almacenaban los cambios y versiones.
+<p align="center">
+<img src="img/v_centralizado.png" alt="Control version Centralizado" width="60%">
+</p>
+📌 Problema: conflictos al editar el mismo archivo.
+🛠️ Solución: gestionar conflictos manualmente.
+😰 Limitación: ineficiente en equipos grandes con actualizaciones frecuent6.
+
+  ### 🌍 Sistemas de Control de Versiones Distribuidos
+
+Cada desarrollador tiene una copia local completa del proyecto.
+
+<p align="center">
+  <img src="img/v_distribuido.png" alt="Control version Distribuido" width="60%">
+</p>
+
+🔄 Trabaja localmente sin depender de un servidor.
+✅ Más seguro ante caídas del servidor.
+🤝 Mejor resolución de conflictos y trabajo simultáneo.
+
+---
 
 ## Importancia de un control de versiones
 - 🔁 **Seguimiento de cambios:** puedes ver y revertir cualquier modificación.
@@ -46,44 +87,33 @@ Permite:
 Un repositorio es el **almacén donde se guardan los archivos del proyecto y su historial**. 
 
 📚 Metáfora: Es como una estantería con libros, donde cada libro representa una versión diferente del proyecto.
+<div align="center">
+  <a href="" title="Estante de Libros">
+    <img src="/img/estante_libros.png?sanitize=true" width="300" height="280" aria-hidden="true">
+  </a>
+</div>
 
 ---
-
-## Algunos otros sistemas de control de versiones
-
-- 🔹 GitLab
-- 🔹 Bitbucket
-- 🔹 Mercurial
-- 🔹 Bazaar
-
----
-
-## Tipos de sistemas de control de versiones
-
-### 📁 Local
-Cada desarrollador guarda los cambios en su máquina local. No permite colaboración fácil.
-
-### 🌐 Centralizado
-Un servidor central contiene el proyecto. Todos los usuarios dependen de la conexión al servidor (ej. SVN, CVS).
-
-### 🌍 Distribuido
-Cada usuario tiene una copia local del repositorio. Ejemplo: **Git**
-
----
-
 ## Iniciando un proyecto en Git
 
-### 🔸 Desde cero:
+1. Crear el repositorio en GitHub (sin README, `.gitignore`, ni licencia).
+<p align="center"> <img src="gif/crear_new_repos.gif" alt="Crear repositorio en GitHub" width="70%"> </p>
+
+2. Clonar el repositorio:
 ```bash
-git init nombre-de-tu-proyecto
-cd nombre-de-tu-proyecto
+git clone https://github.com/usuario/nombre-del-repo.git
+cd nombre-del-repo
+```
+3. Agregar tus archivos y hacer el primer commit:
+```bash
+git add .
+git commit -m "feat: proyecto base inicial"
+```
+4. Subir los cambios a GitHub:
+```bash
+git push origin main
 ```
 
-### 🔸 En una carpeta existente:
-```bash
-cd carpeta-existente
-git init
-```
 
 ---
 
