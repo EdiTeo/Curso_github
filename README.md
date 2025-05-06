@@ -4,18 +4,15 @@
 ## ¿Qué es un control de versiones?
 El control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo de tal manera que sea posible recuperar versiones especificas más adelante. Permite:
  
-<div style="display: flex; align-items: center;">
-  <div style="flex: 1; padding-right: 100px;">
-       - ✅ Llevar un historial completo de modificaciones.<br>
-       - 👤 Saber quién hizo qué y cuándo.<br>
-       - 🔄 Revertir errores fácilmente.<br>
-       - 🤝 Trabajar en equipo sin conflictos.<br>
-  </div>
-  <div style="flex: 2;" id="markdown-container">
-        <img src="img/control_version.png" alt="Imagen control de versiones" width="40%">
-  </div>
-</div>
-
+- ✅ Llevar un historial completo de modificaciones.<br>
+- 👤 Saber quién hizo qué y cuándo.<br>
+- 🔄 Revertir errores fácilmente.<br>
+- 🤝 Trabajar en equipo sin conflictos.<br>
+   
+<p align="center">
+<img src="img/control_version.png" alt="Control version local" width="60%">
+</p>
+ 
 Los sistemas de control de versiones han ido evolucionando a lo largo del tiempo y podemos clasificarlos en tres tipos: **Locales**, **Centralizados** y **Distribuidos**.
 
  ### 📁 Sistemas de Control de Versiones Locales
@@ -70,7 +67,7 @@ Cada desarrollador tiene una copia local completa del proyecto.
 
 ---
 
-## ¿Qué es Git?
+ ## <h2 align="center">¿Qué es Git?</h2>
 
 Git es un **sistema de control de versiones distribuido**. Cada desarrollador tiene una copia completa del proyecto (repositorio) en su equipo.
 
