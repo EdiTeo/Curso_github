@@ -1,7 +1,7 @@
 # Curso GitHub
-# Clase 1 – Introducción al Control de Versiones y Git
+# <h1 align="center">Clase 1 – Introducción al Control de Versiones y Git</h1>
 
-## ¿Qué es un control de versiones?
+## <h2 align="center">¿Qué es un control de versiones?</h2>
 El control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo de tal manera que sea posible recuperar versiones especificas más adelante. Permite:
  
 - ✅ Llevar un historial completo de modificaciones.<br>
@@ -15,7 +15,7 @@ El control de versiones es un sistema que registra los cambios realizados sobre 
  
 Los sistemas de control de versiones han ido evolucionando a lo largo del tiempo y podemos clasificarlos en tres tipos: **Locales**, **Centralizados** y **Distribuidos**.
 
- ### 📁 Sistemas de Control de Versiones Locales
+ ### <p align="center"><strong>📁 Sistemas de Control de Versiones Locales</strong></p>
 
 Los sistemas locales almacenaban versiones en bases de datos en lugar de múltiples archivos. Solo se tenía una copia activa del proyecto, evitando confusión o eliminación de versiones.
 <p align="center">
@@ -23,7 +23,7 @@ Los sistemas locales almacenaban versiones en bases de datos en lugar de múltip
 </p>
 👉 Se trabajaba en el computador personal del desarrollador, sin una forma eficiente de compartir el código.
 
-  ### 🌐 Sistemas de Control de Versiones Centralizados
+### <p align="center"><strong>🌐 Sistemas de Control de Versiones Centralizados</strong></p>
 
 Para facilitar la colaboración, se comenzó a usar un servidor central donde se almacenaban los cambios y versiones.
 <p align="center">
@@ -33,7 +33,7 @@ Para facilitar la colaboración, se comenzó a usar un servidor central donde se
 🛠️ Solución: gestionar conflictos manualmente.
 😰 Limitación: ineficiente en equipos grandes con actualizaciones frecuent6.
 
-  ### 🌍 Sistemas de Control de Versiones Distribuidos
+### <p align="center"><strong>🌍 Sistemas de Control de Versiones Distribuidos</strong></p>
 
 Cada desarrollador tiene una copia local completa del proyecto.
 
@@ -47,7 +47,8 @@ Cada desarrollador tiene una copia local completa del proyecto.
 
 ---
 
-## Importancia de un control de versiones
+## <h2 align="center">Importancia de un control de versiones</h2>
+
 - 🔁 **Seguimiento de cambios:** puedes ver y revertir cualquier modificación.
 - 🤝 **Colaboración eficiente:** varios desarrolladores trabajando al mismo tiempo.
 - 🔒 **Seguridad:** conserva la integridad de los archivos.
@@ -79,7 +80,7 @@ Permite:
 
 ---
 
-## ¿Qué es un repositorio?
+## <h2 align="center">¿Qué es un repositorio?</h2>
 
 Un repositorio es el **almacén donde se guardan los archivos del proyecto y su historial**. 
 
@@ -91,7 +92,7 @@ Un repositorio es el **almacén donde se guardan los archivos del proyecto y su 
 </div>
 
 ---
-## Iniciando un proyecto en Git
+## <h2 align="center">Iniciando un proyecto en Git</h2>
 
 1. Crear el repositorio en GitHub (sin README, `.gitignore`, ni licencia).
 <p align="center"> <img src="gif/crear_new_repos.gif" alt="Crear repositorio en GitHub" width="70%"> </p>
@@ -114,7 +115,7 @@ git push origin main
 
 ---
 
-## Los 3 estados de Git
+## <h2 align="center">Los 3 estados de Git</h2>
 
 | Estado    | Descripción                                                                 |
 |-----------|-----------------------------------------------------------------------------|
@@ -124,7 +125,7 @@ git push origin main
 
 ---
 
-## Cambiar de estado
+## <h2 align="center">Cambiar de estado</h2>
 
 1. Ver el estado actual:
 ```bash
@@ -152,7 +153,7 @@ git log
 
 ---
 
-## ¿Qué es un Commit?
+## <h2 align="center">¿Qué es un Commit?</h2>
 
 Un **punto de guardado** que captura el estado actual del proyecto.
 
@@ -167,7 +168,7 @@ Contiene:
 
 ---
 
-## ¿Qué es el HEAD?
+## <h2 align="center">¿Qué es el HEAD?</h2>
 
 `HEAD` es un **puntero que indica en qué commit estás actualmente**.
 
@@ -181,7 +182,7 @@ Ejemplo:
 
 ---
 
-## Comandos útiles de Git
+## <h2 align="center">Comandos útiles de Git</h2>
 
 | Comando | Descripción |
 |--------|-------------|
