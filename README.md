@@ -723,3 +723,74 @@ git restore archivo.ext
 ---
 
 </details>
+
+
+<details open>
+<summary><strong>Clase 7: Hooks, Alias y Trucos de Git</strong></summary>
+<br>
+
+---
+
+### 🔧 ¿Qué son los Git Hooks?
+Scripts que se ejecutan automáticamente en ciertos eventos del ciclo de vida de Git (antes de un commit, después de un push, etc.).  
+🔄 Se usan para **automatizar tareas**, mejorar la calidad del código y prevenir errores.
+
+---
+
+### 📁 Ubicación
+Los hooks se encuentran en:  `.git/hooks/`
+![alt text](img/hook.png)
+
+Por defecto vienen archivos de ejemplo con extensión `.sample`.
+
+---
+
+### 🔥 Hooks más usados
+| Hook        | Momento de ejecución       | Uso común                     |
+|-------------|-----------------------------|-------------------------------|
+| `pre-commit` | Antes del `git commit`      | Ejecutar linter, pruebas, formateo |
+| `commit-msg` | Valida el mensaje del commit | Forzar formato correcto       |
+| `pre-push`   | Antes del `git push`         | Ejecutar tests                |
+
+---
+
+### 🛠 Cómo crear un Git Hook manualmente
+1. Ir al directorio `.git/hooks/`
+2. Crear un archivo con el nombre del hook, sin extensión (`pre-commit`, `pre-push`, etc.)
+3. Darle permisos de ejecución:
+   ```bash
+   chmod +x pre-commit
+   ```
+## 💻 Alias y Trucos de Git
+
+### ⚡ Alias de Git
+Los alias son una forma de **acelerar tu flujo de trabajo** y hacer más eficiente el uso de Git. Permiten crear comandos cortos para comandos largos o complejos.
+
+#### Ejemplos de alias útiles:
+- `git st` -> `git status`
+- `git co` -> `git checkout`
+- `git br` -> `git branch`
+- `git ci` -> `git commit`
+- `git lg` -> Un log de commits más legible.
+
+#### Cómo crear un alias en Git:
+Para crear un alias de Git, puedes usar el comando `git config`:
+
+```bash
+git config --global alias.st status
+```
+ **Alias mas utilizados:**
+ - Ver log de commits de manera legible: 
+    ```bash
+    git config --global alias.lg "log --oneline --graph --all --decorate
+    ```
+ - Ver todos los remotos: 
+    ```bash
+    git config --global alias.remotes "remote -v"
+    ```
+ - Ver las diferencias entre los archivos modificados: 
+    ```bash
+    git config --global alias.diff-all "diff --color=auto --stat"
+    ```
+
+</details>
