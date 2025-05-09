@@ -546,3 +546,88 @@ git push origin feature-rama
 ---
 
 </details>
+
+ 
+<details open>
+  <summary><strong>Clase 5 – GitFlow </strong></summary>
+
+<br>
+
+## 📘 ¿Qué es GitFlow?
+Es la forma en que un equipo utiliza Git para trabajar colaborativamente, siguiendo ciertas pautas y estructura de ramas.
+
+## 🌳 Estructura del Git Flow
+
+![alt text](img/image.png)
+
+## 📌 Ramas del Git Flow
+
+- `master`: Contiene el código listo para producción.
+- `develop`: Contiene el código en desarrollo, listo para pruebas.
+- `feature/<nombre>`: Se crea desde `develop` para nuevas funcionalidades.
+- `release/<nombre>`: Se crea desde `develop` para preparar una nueva versión.
+- `hotfix/<nombre>`: Se crea desde `master` para corregir errores urgentes.
+
+## 🔧 Comandos comunes con Git Flow
+
+> Usar git-flow:
+
+```bash
+git flow init             # Inicializa el flujo Git Flow
+
+git flow feature start nombre     # Inicia una nueva feature
+
+git flow feature finish nombre    # Finaliza y fusiona la feature a develop
+
+git flow release start v1.0.0     # Inicia una release
+
+git flow release finish v1.0.0    # Finaliza y fusiona a master y develop
+
+git flow hotfix start fix-bug     # Inicia un hotfix
+
+git flow hotfix finish fix-bug    # Finaliza y fusiona a master y develop
+```
+
+---
+
+## 🔄 GitHub Flow
+
+- Solo existe la rama `master` y cualquier rama nueva debe integrarse mediante una Pull Request.
+
+```text
+master
+  \
+   feature-x  --> Pull Request --> merge a master
+```
+---
+
+## 🔁 Trunk Based Development
+
+- Se trabaja directamente en `master`, con ramas auxiliares muy pequeñas y de vida corta.
+- Ideal con buena integración continua (CI/CD).
+
+---
+
+## 🧠 Ship / Show / Ask
+
+### 1. 🚀 Ship
+- Se hace merge directamente a `master` sin revisión.
+
+### 2. 👀 Show
+- Se crea una PR que se fusiona inmediatamente, solo para que CI revise los cambios.
+
+### 3. ❓ Ask
+- Se crea una PR para discutir y revisar los cambios antes de fusionarlos.
+
+---
+
+## ✅ Requisitos para usar Ship / Show / Ask
+
+- Sistema de CI/CD funcionando
+- Confianza en el equipo
+- Buenas prácticas de desarrollo
+- Ramas pequeñas, de vida corta, saliendo desde `master`
+- Responsabilidad individual
+
+---
+</details>
