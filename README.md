@@ -1,7 +1,7 @@
 # Curso GitHub
  
 <details open>
-  <summary><strong>📘 Clase 1 – Introducción al Control de Versiones y Git</strong></summary>
+  <summary><strong>Clase 1 – Introducción al Control de Versiones y Git</strong></summary>
 
 <br>
 <h2 align="center">¿Qué es un control de versiones?</h2>
@@ -412,4 +412,137 @@ git remote prune origin
 Usar `git branch -d <rama>` cuando ya no se necesiten.
 
 ---
+</details>
+
+<br>
+ 
+<details open>
+  <summary><strong>Clase 4 – Push, pull & pull request</strong></summary>
+
+<br>
+
+## 🚀 git push
+
+### 📌 ¿Qué hace?
+`git push` sirve para **enviar (empujar)** los cambios del repositorio local al repositorio remoto.
+
+```bash
+git push origin <rama>
+```
+
+Ejemplo:
+```bash
+git push origin main
+```
+
+---
+
+### 🎯 Comandos útiles de `git push`
+
+```bash
+git push                          # Empuja los cambios actuales al remoto
+
+git push -u origin <rama>         # Empuja y guarda la rama como upstream
+
+git push --all                    # Empuja todas las ramas locales
+
+git push origin <rama1> <rama2>  # Empuja varias ramas
+
+git push -f                       # Fuerza el push (¡Peligroso!)
+
+git push -d origin <rama>         # Borra una rama remota
+```
+
+---
+
+### ⚠️ Errores comunes con `git push` y soluciones
+
+- **Error:** rejected (non-fast-forward)
+  - ✅ Solución: Haz un `git pull` antes del `push`
+
+```bash
+git pull origin main
+```
+
+- **Error:** "Updates were rejected because the remote contains work that you do not have."
+  - ✅ Solución: Primero sincroniza con `git pull`, resuelve conflictos, luego `git push`
+
+- **Peligro:** `git push -f`
+  - ❌ Puede sobreescribir cambios ajenos
+  - ✅ Úsalo solo si sabes lo que haces y nunca en `main` o `develop`
+
+---
+
+## 🔄 git pull
+
+### 📌 ¿Qué hace?
+`git pull` sirve para **traer (jalar)** los cambios del repositorio remoto al local.
+
+```bash
+git pull origin <rama>
+```
+
+Ejemplo:
+```bash
+git pull origin main
+```
+
+---
+
+### 🎯 Comandos útiles de `git pull`
+
+```bash
+git pull                             # Trae cambios de la rama por defecto
+
+git pull --set-upstream origin <rama>  # Establece upstream y trae cambios
+
+git pull --all                        # Trae cambios de todas las ramas remotas
+
+git pull origin <rama1> <rama2>       # (No recomendado, puede ser confuso)
+```
+
+---
+
+### ⚠️ Errores comunes con `git pull` y soluciones
+
+- **Conflictos de fusión (merge conflicts)**
+  - ✅ Solución: Edita los archivos conflictivos y resuelve manualmente.
+  - Luego ejecuta:
+
+```bash
+git add .
+git commit -m "Conflictos resueltos"
+```
+
+---
+
+## 🔃 Pull Request (PR)
+
+### ✅ ¿Cómo se hace una PR?
+1. Sube tu rama con `git push`:
+
+```bash
+git push origin feature-rama
+```
+
+2. Luego en GitHub:
+   - Opción 1: Si la rama fue subida recién, te aparece el botón "Compare & pull request"
+   - Opción 2: Ir a la pestaña **Pull Request** > "New Pull Request"
+
+---
+
+### 💡 Buenas prácticas para una PR
+- Realiza una sola funcionalidad por PR
+- Escribe una descripción clara
+- Adjunta imágenes, GIFs o videos si es posible
+
+---
+
+### 🔍 Revisar una PR
+- Sé positivo al dar feedback
+- Sé claro y conciso
+- Entiende el contexto del código
+
+---
+
 </details>
