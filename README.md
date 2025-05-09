@@ -1,6 +1,6 @@
 # Curso GitHub
  
-<details>
+<details open>
   <summary><strong>📘 Clase 1 – Introducción al Control de Versiones y Git</strong></summary>
 
 <br>
@@ -101,7 +101,64 @@ Un repositorio es el **almacén donde se guardan los archivos del proyecto y su 
 </div>
 
 ---
-## <h2 align="center">Iniciando un proyecto en Git</h2>
+
+## 🚀 Primeros Pasos
+1.  **Crea tu cuenta en GitHub**  
+👉 Regístrate en [github.com](https://github.com/)
+2. **Instala Git**
+👉 Descarga desde [git-scm.com](https://git-scm.com/) y sigue las instrucciones para tu sistema operativo.
+3. **Configura tu usuario global**
+Abre la terminal y ejecuta:
+  ```bash
+   git config --global user.name "Tu Nombre"
+   git config --global user.email "tuemail@example.com"
+   ```
+4. **Verifica la configuración**
+```bash
+    git config --list
+```
+---
+<details open>
+<summary><strong>🔐 Para no iniciar sesión cada vez: conectar GitHub con SSH</strong></summary>
+<br>
+Conectar por SSH permite autenticarse sin ingresar usuario/contraseña cada vez que haces <code>git push</code> o <code>git clone</code>.
+
+1. **Genera una nueva clave SSH:**
+```bash
+ssh-keygen -t ed25519 -C "tuemail@example.com"
+```
+
+2. **Agrega tu clave SSH al agente de autenticación:**
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+3. **Copia tu clave pública:**
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+4. **Agrega la clave pública en GitHub:**
+- Ve a GitHub → Settings → SSH and GPG keys → **New SSH key**
+- Pega la clave y guarda
+
+5. **Prueba la conexión:**
+```bash
+ssh -T git@github.com
+```
+Si todo está correcto, verás un mensaje de bienvenida.
+
+<p align="center">
+ 
+  <img src="img/ssh.png" alt="Conexión SSH GitHub" width="60%">
+</p>
+
+</details>
+
+---
+
+### <h2 align="center">Iniciando un proyecto en Git</h2>
 
 1. Crear el repositorio en GitHub (sin README, `.gitignore`, ni licencia).
 <p align="center"> <img src="gif/crear_new_repos.gif" alt="Crear repositorio en GitHub" width="70%"> </p>
@@ -202,5 +259,90 @@ Ejemplo:
 | `git commit -am "mensaje"` | Agrega y hace commit de todos los archivos rastreados. |
 | `git checkout <id_commit>` | Cambia el HEAD a un commit anterior. |
 
+
+</details>
+
+<br>
+ 
+<details open>
+  <summary><strong>Clase 2 – Introducción al Control de Versiones y Git</strong></summary>
+
+<br>
+
+### 🌱 ¿Qué es una rama (branch)?
+Una rama es una **instantánea** del código, como una línea paralela para trabajar sin afectar el código principal.
+
+### 🎯 ¿Para qué sirven?
+Permiten:
+- Desarrollo paralelo
+- Colaboración sin conflictos
+- Pruebas aisladas
+
+---
+
+### ✍️ Crear y ver ramas
+```bash
+git branch                   # Ver ramas existentes
+git branch <nombre>         # Crear nueva rama
+git switch <nombre>         # Cambiar de rama (alternativa a checkout)
+git checkout <nombre>       # Cambiar de rama
+```
+
+---
+
+### 🔀 Fusionar ramas (merge)
+```bash
+git merge <rama>            # Fusiona la rama con la actual
+git merge <rama> --no-ff    # Evita fast-forward, mantiene historial
+```
+Cuando fusionas, Git intenta mezclar los cambios. Si todo va bien, listo.
+
+---
+
+### 🧹 Eliminar ramas
+```bash
+git branch -d <rama>        # Elimina rama (después de fusionarla)
+git branch -a               # Ver todas las ramas locales y remotas
+```
+🧠 Es buena práctica eliminar ramas que ya cumplieron su propósito.
+
+---
+
+### ⚠️ Conflictos en Git
+Cuando dos ramas modifican **las mismas líneas** de un archivo → conflicto.
+
+### 🛠️ Resolviendo conflictos
+Git marcará el archivo así:
+```txt
+<<<<<<< HEAD
+(cambios de tu rama actual)
+=======
+(cambios de la rama que estás fusionando)
+>>>>>>>
+```
+Debes elegir:
+- 🟢 Quedarte con los cambios de tu rama
+- 🔵 Quedarte con los cambios de la otra rama
+- ✏️ Editar y combinar ambos manualmente
+
+Luego de resolver:
+```bash
+git add archivo_conflictivo.txt
+git commit -m "Conflicto resuelto"
+```
+---
+### ✏️ Cambiar el nombre de una rama
+
+###### Estando en la rama que deseas renombrar
+```bash
+git branch -m nuevo-nombre
+```
+###### Renombrar otra rama (sin estar dentro de ella)
+
+```bash
+git branch -m viejo-nombre nuevo-nombre
+```
+
+---
 
 </details>
