@@ -265,7 +265,7 @@ Ejemplo:
 <br>
  
 <details open>
-  <summary><strong>Clase 2 – Introducción al Control de Versiones y Git</strong></summary>
+  <summary><strong>Clase 2: Ramas, Merge y Conflictos</strong></summary>
 
 <br>
 
@@ -345,4 +345,71 @@ git branch -m viejo-nombre nuevo-nombre
 
 ---
 
+</details>
+
+<br>
+ 
+<details open>
+  <summary><strong>Clase 3 – GitHub y Repositorios Remotos</strong></summary>
+
+<br>
+
+### 🧠 ¿Git y GitHub son lo mismo?
+- **Git**: sistema de control de versiones.
+- **GitHub**: plataforma en la nube para alojar proyectos Git y colaborar.
+
+### 🧠 ¿GitHub es único?
+No, existen otras plataformas como:
+- **Bitbucket**: enfocado en repositorios privados, de Atlassian.
+- **GitLab**: plataforma DevOps completa, también basada en Git.
+
+---
+
+### 🌐 ¿Qué es un repositorio remoto?
+Un repositorio en línea que actúa como punto de sincronización entre varios repositorios locales.
+
+---
+
+### 🔗 Enlazar un repositorio local con remoto
+```bash
+git remote add origin <url>         # Enlazar con remoto
+git remote -v                       # Verificar remotos
+```
+📌 *"origin"* es el alias estándar para el repositorio principal.
+
+---
+
+### 📥 Clonar repositorio
+```bash
+git clone <url_repositorio>         # Clona el repositorio remoto
+```
+
+---
+
+### 📤 Subir al repositorio remoto
+```bash
+git push origin <rama>              # Enviar rama al remoto
+```
+
+---
+
+### 🌱 Crear ramas remotas y sincronizar
+```bash
+git branch -a                       # Ver todas las ramas
+
+# Cambiar a una rama remota
+git switch <rama_remota>
+
+# Traer ramas del remoto
+git fetch
+
+# Limpiar referencias remotas eliminadas
+git remote prune origin
+```
+---
+
+### 🧹 Eliminar ramas locales obsoletas
+Usar `git branch -d <rama>` cuando ya no se necesiten.
+
+---
 </details>
