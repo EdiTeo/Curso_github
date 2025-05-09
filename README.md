@@ -549,7 +549,7 @@ git push origin feature-rama
 
  
 <details open>
-  <summary><strong>Clase 5 – GitFlow </strong></summary>
+  <summary><strong>Clase 5 – GitFlow, GitHub Flow y Trunk Based</strong></summary>
 
 <br>
 
@@ -631,3 +631,10 @@ master
 
 ---
 </details>
+
+<details open>
+  <summary><strong>Clase 6 – </strong></summary>
+
+<br>
+
+<details>
