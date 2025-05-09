@@ -633,8 +633,93 @@ master
 </details>
 
 <details open>
-  <summary><strong>Clase 6 – </strong></summary>
+  <summary><strong>Clase 6 – Buenas prácticas en Git y Deshacer Cambios</strong></summary>
 
 <br>
 
-<details>
+#### ¿Para qué sirven las buenas prácticas?
+- Son estándar en equipos profesionales
+- Facilitan la resolución de conflictos
+- Hacen el historial de commits más claro
+- Permiten trabajar en equipo de forma efectiva
+- Ayudan a revisar y auditar el código fácilmente
+
+#### 📌 ¿Cada cuánto debería hacer un commit?
+- **A menudo**: mejor varios commits pequeños que uno grande
+- No hacer commits sin sentido
+- Hacer commit por funcionalidad o cambio específico
+- Evitar mezclar cambios no relacionados en un mismo commit
+
+#### 📝 Escribir buenos commits
+- Usa el **modo imperativo** (Add, Fix, Remove, etc.)
+- No uses punto final ni puntos suspensivos
+- Máximo 50 caracteres en el título
+- Agrega contexto en el cuerpo del mensaje si es necesario
+- Usa prefijos semánticos:
+  - `style:` cambios de formato
+  - `test:` test o refactor de tests
+  - `feat:` nueva funcionalidad
+  - `fix:` corrección de errores
+  - `perf:` mejoras de rendimiento
+  - `build:` tareas de despliegue
+  - `ci:` integración continua
+  - `docs:` documentación
+  - `refactor:` refactorización
+
+#### 🌿 Nombres de ramas
+- Usa nombres consistentes y descriptivos
+- Incluye acción + ID de tarea si aplica (ej. `feat/login-form-123`)
+- Evita usar nombres genéricos como `nueva-rama` o `prueba`
+
+---
+
+### ♻️ Deshacer cambios en Git
+
+#### ¿Cuándo deshacer?
+- El proyecto dejó de funcionar
+- Recuperar código eliminado
+- Revertir cambios incorrectos
+- Limpiar historial antes de hacer push
+
+#### 🧨 Comandos destructivos vs no destructivos
+- **Destructivos** modifican el historial (reset --hard, rebase mal usado)
+- **No destructivos** preservan historial (revert, checkout sin push)
+
+#### 🔧 Comandos útiles
+- `git reset`
+  - `--soft`: mantiene los cambios en staging
+  - `--mixed`: remueve del área de staging, conserva en working dir
+  - `--hard`: elimina del área de staging y working directory
+- `git revert`
+  - Crea un commit nuevo que revierte otro commit
+- `git checkout`
+  - Recupera archivos específicos de commits anteriores
+  - También permite cambiar de rama
+- `git restore`
+  - Reemplaza `checkout` para restaurar archivos
+
+#### 🧠 Comandos comunes para deshacer:
+```bash
+git reset --hard HEAD~<N>
+git reset --soft HEAD~<N>
+git reset --mixed HEAD~<N>
+git reset --hard <SHA>
+git reset --soft <SHA>
+
+git revert HEAD~<N>
+git revert <SHA>
+
+git checkout HEAD~<N>
+git checkout <SHA>
+
+git restore archivo.ext
+```
+
+#### ⚠️ Consejos al deshacer:
+- Siempre haz backup antes de usar `reset --hard`
+- Evita usar comandos destructivos en ramas compartidas
+- Usa `revert` si ya hiciste push y necesitas deshacer un cambio
+
+---
+
+</details>
