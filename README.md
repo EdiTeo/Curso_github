@@ -745,7 +745,22 @@ Por defecto vienen archivos de ejemplo con extensión `.sample`.
 
 ---
 
-### 🔥 Hooks más usados
+### 🔥 Hooks del lado del cliente:
+Solo afectan al repositorio local en el que estan y su mayor desventaja es que sus acciones solo ocurriran para ti, siendo que tu equipo no tendra estos beneficios.
+
+Tipos de hooks:
+
+- pre-commit
+- prepare-commit-msg
+- commit-msg
+- post-commit
+- pre-push
+- post-checkout y post-merge
+
+    ![alt text](img/hookutil.png)
+
+### Hooks más usados
+
 | Hook        | Momento de ejecución       | Uso común                     |
 |-------------|-----------------------------|-------------------------------|
 | `pre-commit` | Antes del `git commit`      | Ejecutar linter, pruebas, formateo |
